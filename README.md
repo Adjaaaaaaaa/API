@@ -1,20 +1,4 @@
 # API
-
-├── extract_users.py               # Script d'extraction depuis l’API GitHub
-├── filtered_users.py              # Script de filtrage métier
-├── data/
-│   ├── users.json                 # Données brutes extraites
-│   └── filtered_users.json        # Données nettoyées et filtrées
-├── api/
-│   ├── main.py                    # Lancement de l’API FastAPI
-│   ├── models.py                  # Schémas Pydantic
-│   ├── routes.py                  # Endpoints API
-│   ├── security.py                # Gestion de l’authentification
-
-├── requirements.txt              # Dépendances du projet
-├── .env                          # Exemple de fichier d’environnement
-└── README.md                     # Documentation complète du projet
-
 ## Présentation
 
 Ce projet propose une API basée sur FastAPI permettant d’extraire, filtrer et exposer des données d’utilisateurs depuis l’API GitHub. Il inclut des scripts d’extraction, de nettoyage, ainsi qu’une interface sécurisée pour accéder aux données filtrées.
@@ -29,8 +13,22 @@ Projet réalisé dans le cadre de la formation Simplon.
 
 ## Structure du projet
 
-Voir l’arborescence ci-dessus pour le détail des fichiers et dossiers.
+ ```
+├── extract_users.py               # Script d'extraction depuis l’API GitHub
+├── filtered_users.py              # Script de filtrage métier
+├── data/
+│   ├── users.json                 # Données brutes extraites
+│   └── filtered_users.json        # Données nettoyées et filtrées
+├── api/
+│   ├── main.py                    # Lancement de l’API FastAPI
+│   ├── models.py                  # Schémas Pydantic
+│   ├── routes.py                  # Endpoints API
+│   ├── security.py                # Gestion de l’authentification
 
+├── requirements.txt              # Dépendances du projet
+├── .env                          # Exemple de fichier d’environnement
+└── README.md                     # Documentation complète du projet
+ ```
 ## Installation
 
 1. Clonez le dépôt :
