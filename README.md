@@ -56,3 +56,7 @@ Projet réalisé dans le cadre de la formation Simplon.
   ```bash
   uvicorn api.main:app --reload
   ```
+- **l'interface** :
+  ```
+  ![alt text](interface.png)
+  ```
