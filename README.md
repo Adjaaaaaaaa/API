@@ -1,4 +1,4 @@
-# API
+
 ## Présentation
 
 Ce projet propose une API basée sur FastAPI permettant d’extraire, filtrer et exposer des données d’utilisateurs depuis l’API GitHub. Il inclut des scripts d’extraction, de nettoyage, ainsi qu’une interface sécurisée pour accéder aux données filtrées.
@@ -57,6 +57,5 @@ Projet réalisé dans le cadre de la formation Simplon.
   uvicorn api.main:app --reload
   ```
 - **l'interface** :
-  ```
   ![alt text](interface.png)
-  ```
+  

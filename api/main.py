@@ -1,4 +1,7 @@
 from fastapi import FastAPI
+from routes import router
+from fastapi.responses import RedirectResponse
+
 """
 This module initializes a FastAPI application for interacting with GitHub user data.
 - Imports and includes API routes from the `routes` module.
@@ -10,8 +13,6 @@ Endpoints:
 Usage:
     Run this module to start the FastAPI server and access the API documentation at "/docs".
 """
-from routes import router
-from fastapi.responses import RedirectResponse
 
 
 app = FastAPI(
