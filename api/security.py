@@ -3,6 +3,19 @@ from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from dotenv import load_dotenv
 import os
 import secrets
+"""
+This module provides basic HTTP authentication for FastAPI endpoints using credentials
+stored in environment variables.
+Functions:
+    verify_credentials(credentials: HTTPBasicCredentials = Depends(security)):
+        Dependency function for FastAPI routes that verifies the provided HTTP Basic
+        credentials against a list of authorized users loaded from the environment.
+        Raises HTTPException with status 401 if authentication fails.
+Environment Variables:
+    AUTH_USERS: A comma-separated list of username:password pairs (e.g., "admin:admin123,user1:pass1")
+        used to authorize users for HTTP Basic authentication.
+"""
+
 
 load_dotenv()  # charge les variables d'environnement du fichier .env
 

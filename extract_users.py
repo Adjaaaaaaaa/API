@@ -1,5 +1,30 @@
-""" pour exécuter le fichier:
-python extract_users.py --max-users 300 --since 15000000  """
+""" 
+This script extracts a specified number of GitHub user profiles created since 2014 using the GitHub API.
+It retrieves basic user information and saves the results to a JSON file.
+Usage:
+    python extract_users.py --max-users 300 --since 15000000
+Arguments:
+    --max-users   The maximum number of users to extract (default: 60).
+    --since       The user ID to start extraction from (default: 0).
+Environment Variables:
+    GITHUB_TOKEN  Your GitHub personal access token, loaded from a .env file.
+Functions:
+    get_users_batch(since):
+        Fetches a batch of 30 users from the GitHub API starting from the given user ID.
+    get_user_details(login):
+        Retrieves detailed information for a specific user by login.
+    handle_rate_limit(response):
+        Handles GitHub API rate limiting by pausing execution if the quota is reached.
+    extract_users(max_users, since=0):
+        Extracts up to max_users GitHub users created since 2014, starting from the given user ID.
+    save_to_json(users):
+        Saves the list of user data to a formatted JSON file.
+    main():
+        Parses command-line arguments and orchestrates the extraction and saving process.
+Output:
+    The extracted user data is saved to 'data/users.json'.
+"""
+
 
 from dotenv import load_dotenv
 import os
@@ -9,6 +34,8 @@ import time
 import argparse
 from pathlib import Path
 from datetime import datetime
+
+
 
 # Charger les variables d'environnement
 load_dotenv()

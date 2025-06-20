@@ -1,4 +1,19 @@
 import json
+"""
+filtered_users.py
+Ce module permet de charger une liste d'utilisateurs GitHub depuis un fichier JSON, de supprimer les doublons, 
+d'appliquer des filtres métier (présence de bio, d'avatar, et date de création postérieure à 2015), 
+puis d'enregistrer la liste filtrée dans un nouveau fichier JSON.
+Fonctions principales :
+- load_users(filepath): Charge les utilisateurs depuis un fichier JSON.
+- remove_duplicates(users): Supprime les doublons en se basant sur l'identifiant GitHub.
+- is_valid_user(user): Vérifie si un utilisateur respecte les critères métier (bio, avatar, date).
+- filter_users(users): Filtre la liste d'utilisateurs selon les critères métier.
+- save_filtered_users(users, output_path): Enregistre les utilisateurs filtrés dans un fichier JSON propre.
+- main(): Orchestration du processus de chargement, filtrage et sauvegarde.
+Utilisation :
+Exécuter ce script pour générer un fichier JSON contenant uniquement les utilisateurs valides et uniques.
+"""
 from pathlib import Path
 from datetime import datetime
 
