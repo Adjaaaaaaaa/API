@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 from fastapi import APIRouter, Depends, HTTPException
-from security import verify_credentials
+from .security import verify_credentials
 
 router = APIRouter()
 """
